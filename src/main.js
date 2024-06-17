@@ -1,6 +1,8 @@
 const header = document.querySelector('.header');
 const home = document.querySelector('.home__container');
 const arrow = document.querySelector('.arrow-up');
+const navbarMenu = document.querySelector('.header__menu');
+const navbarToggle = document.querySelector('.header__toggle');
 
 const headerHeight = header.getBoundingClientRect().height;
 const homeHeight = home.getBoundingClientRect().height;
@@ -27,4 +29,14 @@ document.addEventListener('scroll', () => {
   } else {
     arrow.style.opacity = 0;
   }
+});
+
+navbarToggle.addEventListener('click', () => {
+  //navbar 토글버튼 클릭 처리
+  navbarMenu.classList.toggle('open');
+});
+
+navbarMenu.addEventListener('click', () => {
+  //navbar 토글버튼 클릭 처리
+  navbarMenu.classList.remove('open');
 });
