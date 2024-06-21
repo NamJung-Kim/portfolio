@@ -1,3 +1,5 @@
+'use strict';
+
 const header = document.querySelector('.header');
 const home = document.querySelector('.home__container');
 const arrow = document.querySelector('.arrow-up');
@@ -19,7 +21,7 @@ document.addEventListener('scroll', () => {
 document.addEventListener('scroll', () => {
    // 아래로 스크롤 시 홈 내용을 투명하게 바꿈
   home.style.opacity = 1 - window.scrollY/ homeHeight;
-  console.log(1 - window.scrollY/ homeHeight);
+  // console.log(1 - window.scrollY/ homeHeight);
 });
 
 document.addEventListener('scroll', () => {
